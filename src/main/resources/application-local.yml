@@ -5,7 +5,7 @@ spring:
     gateway:
       routes:
         - id: vmall-mall-service
-          uri: ${URI_VMALL_MALL_SERVICE}
+          uri: lb://vmall-mall-service
           predicates:
             - Path=/mall/**
           filters:
@@ -16,6 +16,7 @@ server:
 
 eureka:
   client:
-    register-with-eureka: ${REGISTER_EUREKA}
+    register-with-eureka: true
     service-url:
-      defaultZone: ${EUREKA_SERVER}
+      defaultZone: http://localhost:8761/eureka
+
