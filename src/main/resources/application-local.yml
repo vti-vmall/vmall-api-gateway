@@ -10,6 +10,12 @@ spring:
             - Path=/mall/**
           filters:
             - RewritePath=/mall/(?<segment>.*), /$\{segment}
+        - id: vmall-user-manager
+          uri: lb://vmall-user-manager
+          predicates:
+            - Path=/user/**
+          filters:
+            - RewritePath=/user/(?<segment>.*), /$\{segment}
 
 server:
   port: 8888
