@@ -38,6 +38,12 @@
       <artifactId>reactor-test</artifactId>
       <scope>test</scope>
     </dependency>
+    <!--    SPRING CLOUD CONFIG-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+    <!--    END SPRING CLOUD CONFIG-->
   </dependencies>
   <dependencyManagement>
     <dependencies>

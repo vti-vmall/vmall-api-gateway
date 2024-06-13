@@ -1,21 +1,7 @@
 spring:
   application:
     name: vmall-api-gateway
-  cloud:
-    gateway:
-      routes:
-        - id: vmall-mall-service
-          uri: ${URI_VMALL_MALL_SERVICE}
-          predicates:
-            - Path=/mall/**
-          filters:
-            - RewritePath=/mall/(?<segment>.*), /$\{segment}
-
+  config:
+    import: ${CONFIG_SERVER_URL:optional:configserver:http://localhost:6969}
 server:
   port: 8888
-
-eureka:
-  client:
-    register-with-eureka: ${REGISTER_EUREKA}
-    service-url:
-      defaultZone: ${EUREKA_SERVER}
