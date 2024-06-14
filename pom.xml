@@ -10,7 +10,7 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>vn.edu.vti.vmall</groupId>
-  <artifactId>vmall_api_gateway</artifactId>
+  <artifactId>vmall-api-gateway</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>vmall_api_gateway</name>
   <description>vmall_api_gateway</description>
