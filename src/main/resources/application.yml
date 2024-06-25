@@ -2,5 +2,8 @@ spring:
   application:
     name: vmall-api-gateway
   config:
-    import: ${CONFIG_SERVER_URL:optional:configserver:http://localhost:6969}
+    import: "optional:configserver:"
+  cloud:
+    config:
+      uri: ${CONFIG_SERVER_URL:http://localhost:6969}
 
