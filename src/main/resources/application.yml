@@ -3,5 +3,4 @@ spring:
     name: vmall-api-gateway
   config:
     import: ${CONFIG_SERVER_URL:optional:configserver:http://localhost:6969}
-server:
-  port: 8888
+
